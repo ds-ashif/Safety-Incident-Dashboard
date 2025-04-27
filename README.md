@@ -37,45 +37,31 @@ A React-based dashboard for viewing and reporting AI safety incidents, created a
 4. Open in browser:
 The app will automatically open in your default browser at http://localhost:3000
 
-##Design Decisions
+## Design Decisions
 
-1. Component Structure:
-   
-   **Created reusable components (IncidentItem, FilterControls, etc.) for better maintainability**
-   
-   **Separated concerns with container/presentational components**
+1. **Component Structure**
+   -Created reusable components (IncidentItem, FilterControls, etc.) for better maintainability.
+   -Separated concerns with container/presentational components.
 
-2. State Management:
-   
-   **Used React Context for theme management to avoid prop drilling**
-   
-   **Local component state for form and filtering logic**
+2. **State Management**
+   -Used React Context for theme management to avoid prop drilling.
+   -Local component state for form and filtering logic.
 
-3. Type Safety:
-   
-   **Defined strict TypeScript interfaces for all data structures**
-   
-   **Added prop types for all components**
+3. **Type Safety**
+   -Defined strict TypeScript interfaces for all data structures.
+   -Added prop types for all components.
 
-4. User Experience:
-   
-   **Added form validation for required fields**
-   
-   **Included visual feedback for interactive elements**
-   
-   **Implemented persistent theme preference**
+4. **User Experience**
+   -Added form validation for required fields.
+   -Included visual feedback for interactive elements.
+   -Implemented persistent theme preference.
 
-##Challenges Faced
+## Challenges Faced
 
-1. TypeScript Integration:
-   
-   **Initially struggled with proper type definitions for complex state shapes**
-   
-   **Solved by creating detailed interfaces and leveraging TypeScript generics**
+1. **TypeScript Integration**
+   -Initially struggled with proper type definitions for complex state shapes.
+   -Solved by creating detailed interfaces and leveraging TypeScript generics.
 
-2. Theme Persistence:
-   
-   **Implementing localStorage synchronization while avoiding hydration mismatches**
-   
-   **Solved with useEffect and careful state initialization**
-
+2. **Theme Persistence**
+   -Implementing localStorage synchronization while avoiding hydration mismatches.
+   -Solved with useEffect and careful state initialization.
