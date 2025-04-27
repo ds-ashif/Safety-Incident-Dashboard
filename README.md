@@ -40,21 +40,25 @@ The app will automatically open in your default browser at http://localhost:3000
 ##Design Decisions
 
 1. Component Structure:
+   
    **Created reusable components (IncidentItem, FilterControls, etc.) for better maintainability**
    
    **Separated concerns with container/presentational components**
 
-3. State Management:
+2. State Management:
+   
    **Used React Context for theme management to avoid prop drilling**
    
    **Local component state for form and filtering logic**
 
-5. Type Safety:
+3. Type Safety:
+   
    **Defined strict TypeScript interfaces for all data structures**
    
    **Added prop types for all components**
 
-7. User Experience:
+4. User Experience:
+   
    **Added form validation for required fields**
    
    **Included visual feedback for interactive elements**
@@ -64,11 +68,14 @@ The app will automatically open in your default browser at http://localhost:3000
 ##Challenges Faced
 
 1. TypeScript Integration:
+   
    **Initially struggled with proper type definitions for complex state shapes**
    
    **Solved by creating detailed interfaces and leveraging TypeScript generics**
 
-3. Theme Persistence:
+2. Theme Persistence:
+   
    **Implementing localStorage synchronization while avoiding hydration mismatches**
+   
    **Solved with useEffect and careful state initialization**
 
