@@ -3,15 +3,12 @@ import { Incident, mockIncidents, Severity, SortOrder } from '../types';
 import IncidentList from './IncidentList';
 import IncidentForm from './IncidentForm';
 import FilterControls from './FilterControls';
-import ThemeToggle from './ThemeToggle';
-import { useTheme } from '../context/ThemeContext';
 
 const IncidentDashboard: React.FC = () => {
   const [incidents, setIncidents] = useState<Incident[]>(mockIncidents);
   const [severityFilter, setSeverityFilter] = useState<Severity | 'All'>('All');
   const [sortOrder, setSortOrder] = useState<SortOrder>('newest');
   const [showForm, setShowForm] = useState(false);
-  const { theme } = useTheme();
 
   const addIncident = (newIncident: { title: string; description: string; severity: Severity }) => {
     const incident: Incident = {
@@ -24,10 +21,9 @@ const IncidentDashboard: React.FC = () => {
   };
 
   return (
-    <div className={`dashboard ${theme}`}>
+    <div className="dashboard">
       <div className="header-container">
-      <h1 className="dashboard-title">AI Safety Incident Dashboard</h1>
-        <ThemeToggle />
+        <h1>AI Safety Incident Dashboard</h1>
       </div>
       
       <button 
